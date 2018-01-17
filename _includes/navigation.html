@@ -4,7 +4,7 @@
     {% assign nav_link = element.external | replace: '!twitter', site.twitter | replace: '!discord', site.discord%}
     {% assign target = ' target="_blank"' %}
   {% else %}
-    {% assign nav_link = site.url | append: '/' | append: element.link %}
+    {% assign nav_link = site.baseurl | append: '/' | append: element.link %}
     {% assign target = nil %}
   {% endif %}
   {% assign element_text = element.text | replace: '!twitter', site.twitter %}
