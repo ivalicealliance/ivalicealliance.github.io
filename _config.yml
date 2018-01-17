@@ -11,7 +11,16 @@ markdown : kramdown
 paginate: 5
 plugins: [jekyll-paginate]
 exclude :
-  - node_modules
+  - "node_modules"
+  - "scss"
+  - "gulpfile.js"
+  - "bower.json"
+  - "package.json"
+  - "package-lock.json"
+  - "README.md"
+  - "LICENSE"
+  - "Gemfile"
+  - "Gemfile.lock"  
 defaults:
   - scope:
       path: "assets/images"
