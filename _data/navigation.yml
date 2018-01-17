@@ -1,0 +1,26 @@
+# Internal
+- text: Home
+  icon: fas fa-home
+  link: index.html
+- text: About
+  icon: fas fa-info-circle
+  link: about.html
+- text: Signup
+  icon: fas fa-user-plus
+  link: signup.html
+- text: Agreement
+  icon: fas fa-handshake
+  link: agreement.html
+- text: History
+  icon: fas fa-book
+  link: history.html
+# External 
+- text: Mail
+  icon: fas fa-envelope
+  external: https://webmail.ivalicealliance.net/
+- text: Chat
+  icon: fab fa-discord
+  external: '!discord'
+- text: '@!twitter'
+  icon: fab fa-twitter
+  external: https://twitter.com/!twitter

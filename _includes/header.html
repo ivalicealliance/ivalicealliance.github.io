@@ -1,0 +1,21 @@
+{% unless page.hidden_title %}
+<h1 class="{% if page.post %}mtl{% else %}mvl text-center{% endif %}">
+    {% if page.icon %}
+    <i class="{{ page.icon }}"></i>
+    {% endif %}
+    {{ page.title }}    
+    {% if page.subtitle %}    
+    <br>
+    <small class="text-uppercase">
+        {{ page.subtitle }}
+    </small>
+    {% endif %}
+</h1>
+{% if page.author and page.date %}
+<p class="author">
+    <span class="h6 subheader">
+        {{ page.date | date: "%B %e, %Y, %l:%M %P %Z" }} | {{ page.author }}
+    </span>
+</p>
+{% endif %}
+{% endunless %}

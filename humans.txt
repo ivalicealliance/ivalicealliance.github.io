@@ -1,0 +1,10 @@
+/* TEAM */
+  Developer: Balthier
+  Site: ivalicealliance.net
+  Twitter: @clan_ia
+  Github: @balthier-ex
+  Location: Ivalice
+
+/* SITE */
+  Standards: HTML5, MD, SCSS/CSS3, JS
+  Components: Zurb Foundation, Jekyll, jQuery, Modernizr, bower, grunt

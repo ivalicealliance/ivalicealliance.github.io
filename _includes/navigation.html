@@ -1,0 +1,15 @@
+{% for element in site.data.navigation %} 
+<li>
+  {% if element.external %}
+    {% assign nav_link = element.external | replace: '!twitter', site.twitter | replace: '!discord', site.discord%}
+    {% assign target = ' target="_blank"' %}
+  {% else %}
+    {% assign nav_link = site.url | append: '/' | append: element.link %}
+    {% assign target = nil %}
+  {% endif %}
+  {% assign element_text = element.text | replace: '!twitter', site.twitter %}
+  <a href="{{ nav_link }}"{{ target }}>
+    <i class="{{ element.icon }} fa-fw"></i> {{ element_text }}
+  </a>
+</li>
+{% endfor %}

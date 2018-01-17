@@ -1,0 +1,22 @@
+<div class="cell">
+    <div class="card">
+        <div class="card-image">
+            <img src="{{ include.character.portrait }}" style="width: 100%; height: auto;" alt="Portrait of {{ include.character.name }}">
+        </div>
+        <div class="card-section pas">
+            <p>
+                {% if include.character.previous_names %}
+                <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="{{ include.character.name }} was previously known as: {{ include.character.previous_names }}">
+                    {% endif %} {{ include.character.name }} {% if include.character.previous_names %}
+                </span>
+                {% endif %}
+                <br>
+                <small>
+                    {% assign years = include.character.years | split: ", " %} {% for year in years %}
+                    <span class="label quiet secondary">{{ year }}</span>
+                    {% endfor %}
+                </small>
+            </p>
+        </div>
+    </div>
+</div>
