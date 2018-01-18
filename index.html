@@ -11,10 +11,7 @@ hidden_title: true
   <h1 class="mtl">
     <a href="{{ post.url }}">{{ post.title }}</a>
   </h1>
-  <p class="author">
-    <span class="date">{{ post.date | date: "%B %e, %Y, %l:%M %P %Z" }} {% if post.author %} | {{ post.author }} {% endif %}
-    </span>
-  </p>
+  {% include attribution.html source=post %}
   <div class="content">
     {{ post.content }}
   </div>

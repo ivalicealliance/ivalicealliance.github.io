@@ -1,0 +1,8 @@
+<p class="author">
+    <span class="h6 subheader">
+        {{ include.source.date | date: "%B %e, %Y, %l:%M %P %Z" }} 
+        {% if include.source.author %}
+            | {{ include.source.author }}
+        {% endif %}
+    </span>
+</p>
