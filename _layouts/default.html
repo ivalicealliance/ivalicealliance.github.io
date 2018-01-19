@@ -4,32 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <meta name="description" content="{{ page.title }} - {{ site.name }}" />
-    <meta name="keywords" content="{{ page.keywords }}, {{ site.keywords }}" />
-    <!-- Google fonts https://www.google.com/fonts
-    ================================================== -->
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700,800|Raleway:400,200,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{{ site.baseurl }}{% link css/app.css%}">
-
-    <!-- favicon
-    ================================================== -->
     <link rel="shortcut icon" href="{{ site.baseurl }}{% link favicon.ico %}">
-
-    <!-- Open Graph: https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content/
-    Twitter: https://dev.twitter.com/docs/cards/types/summary-card
-    ============================== -->
-    <meta property="og:title" content="{{ page.title }}"/>
-    <meta property="og:site_name" content="{{ site.name }}"/>
-    <meta property="og:url" content="{{ site.url }}"/>
-    <meta property="og:description" content="{{ page.description }}"/>
-    <meta property="og:image" content="{{ page.imageurl }}"/>
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@{{ site.twitter }}">
-    <meta name="twitter:title" content="{{ page.title }}">
-    <meta name="twitter:description" content="{{ page.description }}">
-    <meta name="twitter:image" content="{{ page.imageurl }}">
-
+    {% seo %}
   </head>
   <body>
 
@@ -46,7 +24,7 @@
 
       <div class="title-bar">
         <div class="title-bar-left">
-          <h4 class="title-bar-title font-heavy mas"><a href="{{ site.baseurl }}">{{ site.name }}</a></h4>
+          <h4 class="title-bar-title font-heavy mas"><a href="{{ site.baseurl }}">{{ site.title }}</a></h4>
           <!-- TODO - use image
             <img src="https://www.ivalicealliance.net/images/96_logo2013c.png" alt="Ivalice Alliance" height="48" width="262">
           -->

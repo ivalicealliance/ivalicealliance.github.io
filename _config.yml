@@ -1,16 +1,25 @@
-name : Ivalice Alliance
-description : Website for Ivalice Alliance
-keyword : ivalice, alliance, clan, gaming, final, fantasy, xii
-url : https://www.ivalicealliance.net
+title: Ivalice Alliance
+description: A website with news and all things related to the Ivalice Alliance clan.
+keyword: ivalice alliance, clan, gaming, final fantasy, xii, xiv
+url: https://www.ivalicealliance.net
+logo: /assets/images/clanlogo.png
 discord: https://discord.gg/TEVk6n5
-twitter : clan_ia
-github : ivalicealliance
-author : Balthier
-year : 2008
-markdown : kramdown
+twitter:
+  username: clan_ia
+social:
+  links:
+    - https://twitter.com/clan_ia
+github: ivalicealliance
+author: 
+  name: Balthier
+  twitter: balthier_ex
+year: 2008
+markdown: kramdown
 paginate: 5
-plugins: [jekyll-paginate]
-exclude :
+plugins: 
+  - jekyll-paginate
+  - jekyll-seo-tag
+exclude:
   - "node_modules"
   - "scss"
   - "gulpfile.js"
