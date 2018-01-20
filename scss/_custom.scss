@@ -1,3 +1,5 @@
+@import "material-palette";
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 200;
   @include breakpoint(large up) {
@@ -25,7 +27,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .title-bar {
-  box-shadow: 0 0 10px rgba(138, 138, 138, 0.3);
+  background-color: $material-primary-color;
+  box-shadow: 0 0 10px $material-primary-color;
+
+  a {
+    color: $material-primary-text-color;
+  }
+
+  a:hover {
+    color: scale-color($material-primary-text-color, $lightness: -14%);
+  }
 
   .title-bar-right {
     flex: 2 1 0px;
