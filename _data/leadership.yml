@@ -1,59 +1,75 @@
 leaders:
   - name: Balthier
-    portrait: https://i.imgur.com/9cI1l3n.png
-    sprite: https://i.imgur.com/8uMj2Ei.png
     years: 2008 - Present
+    type:
+      portrait: png
+      sprite: png
   - name: Leo
-    previous_names: Instinct121, Sephiroth
-    portrait: https://i.imgur.com/sWMtgxH.jpg
-    sprite: https://i.imgur.com/RWyb3Lw.png
+    previous_names: Instinct121, Sephiroth    
     years: 2008 - Present
+    type:
+      portrait: jpg
+      sprite: png
 judges:
   - name: RedMage
-    portrait: https://i.imgur.com/0qiLNtT.jpg
-    sprite: https://i.imgur.com/930frBa.png
     years: 2017 - Present, 2009 - 2010
+    type:
+      portrait: jpg
+      sprite: png
 judges_past:
   - name: Golbez
-    portrait: https://www.ivalicealliance.net/history/v1/ice/ia-golbez.jpg
     years: 2011 - 2014
+    type:
+      portrait: jpg
   - name: Amarant
-    portrait: https://i.imgur.com/U0hUupG.png
     years: 2012 - 2014
+    type:
+      portrait: png
   - name: Razeluxe
-    portrait: https://i.imgur.com/QZyXz1Z.png
     years: 2013 - 2014
+    type:
+      portrait: png
   - name: Tellah
     previous_names: Mog 
-    portrait: https://www.ivalicealliance.net/history/v1/ice/ia-tellah.jpg
     years: 2009 - 2011
+    type:
+      portrait: jpg
   - name: Cid
     previous_names: Hanekoma
-    portrait: https://www.ivalicealliance.net/history/v1/ice/ia-cid.jpg
     years: 2010 - 2011
+    type:
+      portrait: jpg
   - name: Edge
     previous_names: Lighthat
-    portrait: https://www.ivalicealliance.net/history/v1/ice/ia-edge.jpg
     years: 2010 - 2011
+    type:
+      portrait: jpg
   - name: Tonberry
-    portrait: https://www.ivalicealliance.net/history/v1/ice/ia-tonberry.jpg
     years: 2011
+    type:
+      portrait: jpg
   - name: Zack
-    portrait: https://www.ivalicealliance.net/history/v1/ice/ia-zack.jpg
     years: 2008 - 2010
+    type:
+      portrait: jpg
   - name: Cloud
     previous_names: Sephiroth
-    portrait: https://www.ivalicealliance.net/history/v1/ice/ia-cloud.jpg
     years: 2010
+    type:
+      portrait: jpg
   - name: Setzer
-    portrait: https://www.ivalicealliance.net/history/v1/ice/ia-setzer.jpg
     years: 2010
+    type:
+      portrait: jpg
   - name: Shadow
-    portrait: https://www.ivalicealliance.net/history/v1/ice/ia-shadow.jpg
     years: 2010
+    type:
+      portrait: jpg
   - name: Squall
-    portrait: https://www.ivalicealliance.net/history/v1/ice/ia-squall.jpg
     years: 2008 - 2009
+    type:
+      portrait: jpg
   - name: Reno
-    portrait: https://www.ivalicealliance.net/history/v1/ice/ia-reno.jpg
     years: 2008
+    type:
+      portrait: jpg

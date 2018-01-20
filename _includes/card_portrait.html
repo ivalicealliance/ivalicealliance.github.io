@@ -1,7 +1,8 @@
 <div class="cell">
     <div class="card">
         <div class="card-image">
-            <img src="{{ include.character.portrait }}" style="width: 100%; height: auto;" alt="Portrait of {{ include.character.name }}">
+                {% assign filename = include.character.name | append: '.' | append: include.character.type.portrait | downcase %}
+            <img src="/assets/portraits/{{ filename }}" style="width: 100%; height: auto;" alt="Portrait of {{ include.character.name }}">
         </div>
         <div class="card-section pas">
             <p>
