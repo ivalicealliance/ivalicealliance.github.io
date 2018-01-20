@@ -13,17 +13,20 @@
   <body>
 
     <div class="off-canvas position-right" data-off-canvas id="offCanvas">
-      <div class="vertical menu mtl">
+      <div class="vertical menu mtl navigation-links">
         {% include navigation.html %}
       </div>
       <button class="close-button" aria-label="Close menu" type="button" data-close>
-        <i class="fas fa-times fa-xs"></i>
+        <span class="fa-layers">
+            <i class="fas fa-circle"></i>
+            <i class="fa-inverse fas fa-times" data-fa-transform="shrink-6"></i>
+          </span>
       </button>
     </div><!-- end .off-canvas -->
 
     <div class="off-canvas-content" data-off-canvas-content>
 
-      <div class="title-bar">
+      <div class="title-bar navigation-links">
         <div class="title-bar-left">          
           <h4 class="title-bar-title font-heavy mas"><a href="{{ site.baseurl }}{% link index.html %}">{{ site.title }}</a></h4>
           <!-- TODO - use image

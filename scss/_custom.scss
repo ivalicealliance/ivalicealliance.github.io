@@ -26,10 +26,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 80%;
 }
 
-.title-bar {
-  background-color: $material-primary-color;
-  box-shadow: 0 0 10px $material-primary-color;
-
+.navigation-links {
   a {
     color: $material-primary-text-color;
   }
@@ -37,6 +34,11 @@ h1, h2, h3, h4, h5, h6 {
   a:hover {
     color: scale-color($material-primary-text-color, $lightness: -14%);
   }
+}
+
+.title-bar {
+  background-color: $material-primary-color;
+  box-shadow: 0 0 10px $material-primary-color;  
 
   .title-bar-right {
     flex: 2 1 0px;

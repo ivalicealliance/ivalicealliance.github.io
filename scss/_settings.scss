@@ -351,8 +351,8 @@ $closebutton-size: (
   medium: 2em,
 );
 $closebutton-lineheight: 1;
-$closebutton-color: $dark-gray;
-$closebutton-color-hover: $black;
+$closebutton-color: $material-secondary-dark-color;
+$closebutton-color-hover: $material-secondary-color;
 
 // 16. Drilldown
 // -------------
@@ -498,10 +498,10 @@ $offcanvas-sizes: (
 $offcanvas-vertical-sizes: (
   small: 250px,
 );
-$offcanvas-background: $light-gray;
-$offcanvas-shadow: 0 0 10px rgba($black, 0.7);
+$offcanvas-background: $material-primary-light-color;
+$offcanvas-shadow: 0 0 10px rgba($material-primary-dark-color, 0.7);
 $offcanvas-inner-shadow-size: 20px;
-$offcanvas-inner-shadow-color: rgba($black, 0.25);
+$offcanvas-inner-shadow-color: rgba($material-primary-dark-color, 0.25);
 $offcanvas-overlay-zindex: 11;
 $offcanvas-push-zindex: 12;
 $offcanvas-overlap-zindex: 13;
@@ -509,7 +509,7 @@ $offcanvas-reveal-zindex: 12;
 $offcanvas-transition-length: 0.5s;
 $offcanvas-transition-timing: ease;
 $offcanvas-fixed-reveal: true;
-$offcanvas-exit-background: rgba($white, 0.25);
+$offcanvas-exit-background: rgba($black, 0.25);
 $maincontent-class: 'off-canvas-content';
 
 // 26. Orbit
