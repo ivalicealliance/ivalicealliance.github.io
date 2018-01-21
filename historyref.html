@@ -41,18 +41,14 @@ icon: fas fa-book
     <small>1/25/2008</small>
 </h4>
 <p class="text-center">    
-    {% for index in (1..9) %}
-    <img class="thumbnail" src="https://www.ivalicealliance.net/history/ffcarchive_pub/yuffie1/cecil{{ index }}.bmp" alt="Screenshot {{ index }}">
-    {% endfor %}
+    {% include imagelist.html path='assets/history/screenshots/yuffie1/' thumbnail='true' %}
 </p>
 
 <h4>Second confrontation by Yuffie
     <small>1/27/2008</small>
 </h4>
 <p class="text-center">
-    {% for index in (1..2) %}
-    <img class="thumbnail" src="https://www.ivalicealliance.net/history/ffcarchive_pub/yuffie2/yuffie{{ index }}.bmp" alt="Screenshot {{ index }}">
-    {% endfor %}
+    {% include imagelist.html path='assets/history/screenshots/yuffie2/' thumbnail='true' %}
 </p>
 
 <h4>AIM Conversations with Butz and Yuffie
@@ -75,9 +71,7 @@ icon: fas fa-book
     <small>2/1/2008</small>
 </h4>
 <p class="text-center">
-    {% for index in (1..5) %}
-    <img class="thumbnail" src="https://www.ivalicealliance.net/history/ffcarchive_pub/yuffie3/{{ index }}.bmp" alt="Screenshot {{ index }}">
-    {% endfor %}
+    {% include imagelist.html path='assets/history/screenshots/yuffie3/' thumbnail='true' %}    
 </p>
 
 <h4>Final conversation with Yuffie and Butz
@@ -105,5 +99,5 @@ icon: fas fa-book
     <small>10/27/2009</small>
 </h4>
 <p class="text-center">
-    <img class="thumbnail" src="{{ site.baseurl }}{% link assets/history/lolyuffie.jpg %}" alt="Screenshot">
+    <img class="thumbnail" src="{{ site.baseurl }}{% link assets/history/screenshots/lolyuffie.jpg %}" alt="Screenshot">
 </p>

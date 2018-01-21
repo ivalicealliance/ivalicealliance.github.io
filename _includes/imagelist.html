@@ -1,0 +1,8 @@
+{% if include.thumbnail %}
+    {% assign thumbnail = 'class="thumbnail"' %}
+{% endif %}
+{% for image in site.static_files %}
+    {% if image.path contains include.path %}
+        <img src="{{ site.baseurl }}{{ image.path }}" {{ thumbnail }} alt="image" />
+    {% endif %}
+{% endfor %}
