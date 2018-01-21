@@ -1,8 +1,9 @@
-{% if include.thumbnail %}
-    {% assign thumbnail = 'class="thumbnail"' %}
-{% endif %}
+<ul class="menu">      
 {% for image in site.static_files %}
     {% if image.path contains include.path %}
-        <img src="{{ site.baseurl }}{{ image.path }}" {{ thumbnail }} alt="image" />
+    <li>
+        <img src="{{ site.baseurl }}{{ image.path }}" class="{{ include.class | default: 'pas' }}" alt="image {% increment counter %}" />
+    </li>
     {% endif %}
 {% endfor %}
+</ul>
