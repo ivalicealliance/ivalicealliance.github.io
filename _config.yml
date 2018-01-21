@@ -19,6 +19,7 @@ paginate: 5
 plugins: 
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-feed
 exclude:
   - "node_modules"
   - "scss"
