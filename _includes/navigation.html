@@ -9,7 +9,7 @@
   {% endif %}
   {% assign element_text = element.text | replace: '!twitter', site.twitter.username %}
   <a href="{{ nav_link }}"{{ target }}>
-    <i class="{{ element.icon }} fa-fw"></i> {{ element_text }}
+    <i class="{{ element.icon }} fa-fw"></i> <span>{{ element_text }}</span>
   </a>
 </li>
 {% endfor %}
