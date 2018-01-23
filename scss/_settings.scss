@@ -818,12 +818,12 @@ $thumbnail-radius: $global-radius;
 // 53. Title Bar
 // -------------
 
-$titlebar-background: $white;
-$titlebar-color: $primary-color;
+$titlebar-background: $material-primary-color;
+$titlebar-color: $material-primary-text-color;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $white;
-$titlebar-icon-color-hover: $medium-gray;
+$titlebar-icon-color: $material-primary-text-color;
+$titlebar-icon-color-hover: scale-color($material-primary-text-color, $lightness: -14%);
 $titlebar-icon-spacing: 0.25rem;
 
 // 54. Tooltip
