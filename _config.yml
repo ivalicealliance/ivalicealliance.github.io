@@ -4,9 +4,9 @@ markdown: kramdown
 highlighter: rouge
 
 plugins: 
-  - jekyll-paginate
-  - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag  
 
 # File rules
 
