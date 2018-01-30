@@ -3,7 +3,7 @@ title:      Web Relaunch
 author:     Balthier
 date:       2018-01-16 19:00:00 -0800
 categories: [news, site]
-image:      /assets/images/ffxv_gaming.jpg
+image:      /assets/images/ffxv-gaming.jpg
 ---
 
 ![Picture of Final Fantasy 15, Hibiki 12-years, a PS4 controller and a Mac on a table]({{ page.image | relative_url }}){: style="max-width: 550px; width: 100%;"}
