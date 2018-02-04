@@ -3,7 +3,7 @@
         <div class="card-section">
             <div class="card-image">
                 {% assign filename = include.character.name | append: '.' | append: include.character.type.sprite | downcase %}
-                <img src="/assets/sprites/{{ filename }}" style="width: 100%; height: auto;" alt="Sprite of {{ include.character.name }}">
+                <img src="/assets/sprites/ffbe/{{ filename }}" style="width: 100%; height: auto;" alt="Sprite of {{ include.character.name }}">
             </div>
             <p>{{ include.character.name }}</p>
         </div>
