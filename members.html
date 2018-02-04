@@ -1,0 +1,85 @@
+--- 
+layout: default 
+title: Members 
+description: Complete list of all Members currently in the clan.
+icon: fas fa-users
+---
+
+{%- capture construct8 %}
+<a href="https://github.com/{{ site.github }}/construct8/">Construct8</a>
+{%- endcapture -%}
+
+<div id="memberlist">
+    <div class="fa-2x text-center">
+        <i class="fas fa-cog fa-spin"></i>
+    </div>
+</div>
+
+<script>    
+    const url = '{{ site.construct8 }}/members.json';
+    const avatarPlaceholder ='https://ui-avatars.com/api/?length=1&size=256&rounded=true&color=ffffff&background=263238&name=';
+    const spritePath = '/assets/sprites/ffrk/'
+    const dateOptions = {  
+        year: "numeric", month: "long", day: "numeric", 
+        hour: "2-digit", minute: "2-digit", timeZoneName: "short"
+    };  
+
+    const memberTemplate = context => 
+        `
+        <div class="cell">
+            <div class="card">
+                <div class="card-section">
+                    <div class="card-image">                        
+                        <img src="${spritePath + context.name.toLowerCase()}.png" style="width: 100%; height: auto;" alt="Avatar of ${context.name}"
+                        onerror="this.src = '${avatarPlaceholder + context.name}';">
+                    </div>
+                    <p>${context.name}</p>
+                </div>
+            </div>
+        </div>
+        `
+
+    const template = list =>
+        `
+        ${list.roles
+            .map(role =>
+                `
+                <h5>${role.name}</h5>
+                <div class="grid-container text-center">
+                    <div class="grid-x grid-margin-x small-up-2 medium-up-4 large-up-5">
+                        ${list.members
+                            .filter(member => member.position === role.position)
+                            .map(memberTemplate)
+                            .join('')
+                        }
+                    </div>
+ 		 		</div>                
+                `
+            )
+            .join('')}
+            <div class="ptl">
+                <p>
+                    This list was last updated on
+                    <strong>${(new Date(list.meta.lastModified)).toLocaleTimeString('en-us', dateOptions)}</strong>.
+                    There are <strong>${list.meta.membercount}</strong> members across 
+                    <strong>${list.meta.rolecount}</strong> roles. This page is automatically generated with information from 
+                    {{ construct8 }}.
+                </p>
+            </div>
+	    `;
+
+    const errorMessage = 
+        `
+            <i class="fas fa-exclamation-triangle"></i> Unfortunately {{ construct8 }} is unreachable at the moment. Please try again later. If this issue persists, 
+            bring it to the attention of the <a href="{{ site.baseurl }}{% link about.html %}">clan's leadership</a>.
+        `;
+            
+    fetch(url)
+        .then((resp) => resp.json())
+        .then((context) => {
+            document.getElementById('memberlist').innerHTML = template(context);
+        })
+        .catch((error) => {
+            document.getElementById('memberlist').innerHTML = errorMessage;
+        }); 
+</script>

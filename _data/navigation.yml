@@ -8,9 +8,9 @@
 - text: Signup
   icon: fas fa-user-plus
   link: signup.html
-- text: Agreement
-  icon: fas fa-handshake
-  link: agreement.html
+- text: Members
+  icon: fas fa-users
+  link: members.html
 - text: History
   icon: fas fa-book
   link: history.html
@@ -21,6 +21,3 @@
 - text: Chat
   icon: fab fa-discord
   external: '!discord'
-- text: '@!twitter'
-  icon: fab fa-twitter
-  external: https://twitter.com/!twitter
