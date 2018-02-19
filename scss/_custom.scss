@@ -52,10 +52,30 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+// Show body after fontawesome loads
+
 body {
   display: none;
 }
 
 .fontawesome-i2svg-active body {
   display: initial;
+}
+
+// Colors for Member status
+
+.online {
+  color: mediumseagreen;
+}
+
+.idle {
+  color: gold;
+}
+
+.dnd {
+  color: tomato;
+}
+
+.offline {
+  color: lightslategray;
 }

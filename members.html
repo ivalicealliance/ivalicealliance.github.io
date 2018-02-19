@@ -17,23 +17,33 @@ icon: fas fa-users
 
 <script>    
     const url = '{{ site.construct8 }}/members.json';
-    const avatarPlaceholder ='https://ui-avatars.com/api/?length=1&size=256&rounded=true&color=ffffff&background=263238&name=';
+    const avatarPlaceholder = 'https://ui-avatars.com/api/?length=1&size=256&rounded=true&color=ffffff&background=263238&name=';
     const spritePath = '/assets/sprites/ffrk/'
     const dateOptions = {  
         year: "numeric", month: "long", day: "numeric", 
         hour: "2-digit", minute: "2-digit", timeZoneName: "short"
     };  
 
+    const statusTemplate = context => {
+        if (["online", "idle", "dnd", "offline"].includes(context.presence.status)) {
+            return `<i class="fas fa-user ${context.presence.status}" data-fa-transform="shrink-5"></i>`
+        } else {
+            return ``
+        }
+    }
+
     const memberTemplate = context => 
         `
         <div class="cell">
             <div class="card">
-                <div class="card-section">
-                    <div class="card-image">                        
+                <div class="card-section pbn">
+                    <div class="card-image">
                         <img src="${spritePath + context.name.toLowerCase()}.png" style="width: 100%; height: auto;" alt="Avatar of ${context.name}"
-                        onerror="this.src = '${avatarPlaceholder + context.name}';">
+                            onerror="this.src = '${avatarPlaceholder + context.name}';">
                     </div>
-                    <p>${context.name}</p>
+                </div>
+                <div class="card-section phs">
+                    ${statusTemplate(context)} ${context.name}
                 </div>
             </div>
         </div>
