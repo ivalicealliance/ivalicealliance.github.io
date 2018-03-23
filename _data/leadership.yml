@@ -16,6 +16,11 @@ judges:
     type:
       portrait: jpg
       sprite: png
+  - name: Vincent
+    years: 2018 - Present
+    type:
+      portrait: jpg
+      sprite: png
 judges_past:
   - name: Golbez
     years: 2011 - 2014
