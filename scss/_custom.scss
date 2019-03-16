@@ -79,3 +79,71 @@ body {
 .offline {
   color: lightslategray;
 }
+
+// Styles for Member Sprite status
+
+.sprite {
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+
+  &-online {
+    @extend .sprite;
+    animation-name: glower-online;
+  }
+
+  &-idle {
+    @extend .sprite;
+    animation-name: glower-idle;
+  }
+
+  &-dnd {
+    @extend .sprite;
+    animation-name: glower-dnd;
+  }
+
+  &-offline {
+    filter: grayscale(100%);
+  }
+
+  @keyframes glower-online {
+    from {
+      filter:
+        saturate(1.25)
+        drop-shadow(0 0 0.35rem mediumseagreen);
+    }
+    to {
+      filter:
+        saturate(1.5)
+        drop-shadow(0 0 0.5rem mediumspringgreen);
+    }
+  }
+  
+  @keyframes glower-idle {
+    from {
+      filter:
+        saturate(1.0)
+        drop-shadow(0 0 0.25rem gold);
+    }
+    to {
+      filter:
+        saturate(1.25)
+        drop-shadow(0 0 0.4rem coral);
+    }
+  }
+  
+  @keyframes glower-dnd {
+    from {
+      filter:
+        saturate(0.75)
+        drop-shadow(0 0 0.15rem tomato);
+    }
+    to {
+      filter:
+        saturate(1.0)
+        drop-shadow(0 0 0.3rem orangered);
+    }
+  }  
+}
+

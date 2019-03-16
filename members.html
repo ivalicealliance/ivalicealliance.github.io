@@ -24,9 +24,18 @@ icon: fas fa-users
         hour: "2-digit", minute: "2-digit", timeZoneName: "short"
     };  
 
+    const statuses = ["online", "idle", "dnd", "offline"] 
     const statusTemplate = context => {
-        if (["online", "idle", "dnd", "offline"].includes(context.presence.status)) {
+        if (statuses.includes(context.presence.status)) {
             return `<i class="fas fa-user ${context.presence.status}" data-fa-transform="shrink-5"></i>`
+        } else {
+            return ``
+        }
+    }
+
+    const animationTemplate = context => {
+        if (statuses.includes(context.presence.status)) {
+            return `sprite-${context.presence.status}`
         } else {
             return ``
         }
@@ -38,7 +47,7 @@ icon: fas fa-users
             <div class="card">
                 <div class="card-section pbn">
                     <div class="card-image">
-                        <img src="${spritePath + context.name.toLowerCase()}.png" style="width: 100%; height: auto;" alt="Avatar of ${context.name}"
+                        <img src="${spritePath + context.name.toLowerCase()}.png" style="width: 100%; height: auto;" class="${animationTemplate(context)}" alt="Avatar of ${context.name}"
                             onerror="this.src = '${avatarPlaceholder + context.name}';">
                     </div>
                 </div>
