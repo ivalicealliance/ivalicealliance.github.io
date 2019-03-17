@@ -73,7 +73,7 @@ body {
 }
 
 .dnd {
-  color: tomato;
+  color: crimson;
 }
 
 .offline {
@@ -83,7 +83,7 @@ body {
 // Styles for Member Sprite status
 
 .sprite {
-  animation-duration: 1.5s;
+  animation-duration: 0.75s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
@@ -104,19 +104,19 @@ body {
   }
 
   &-offline {
-    filter: grayscale(100%);
+    filter: saturate(0.25);
   }
 
   @keyframes glower-online {
     from {
       filter:
         saturate(1.25)
-        drop-shadow(0 0 0.35rem mediumseagreen);
+        drop-shadow(0 0 0.25rem mediumseagreen);
     }
     to {
       filter:
         saturate(1.5)
-        drop-shadow(0 0 0.5rem mediumspringgreen);
+        drop-shadow(0 0 1rem mediumspringgreen);
     }
   }
   
@@ -124,12 +124,12 @@ body {
     from {
       filter:
         saturate(1.0)
-        drop-shadow(0 0 0.25rem gold);
+        drop-shadow(0 0 0.25rem darkorange);
     }
     to {
       filter:
         saturate(1.25)
-        drop-shadow(0 0 0.4rem coral);
+        drop-shadow(0 0 0.75rem gold);
     }
   }
   
@@ -137,12 +137,12 @@ body {
     from {
       filter:
         saturate(0.75)
-        drop-shadow(0 0 0.15rem tomato);
+        drop-shadow(0 0 0.25rem crimson);
     }
     to {
       filter:
         saturate(1.0)
-        drop-shadow(0 0 0.3rem orangered);
+        drop-shadow(0 0 0.5rem tomato);
     }
   }  
 }
