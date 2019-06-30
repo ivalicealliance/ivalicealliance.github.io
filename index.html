@@ -1,40 +1,55 @@
----
-layout: default
+--- 
+layout: default 
 title: Ivalice Alliance
 keywords: ivalice alliance, gaming clan, final fantasy
+description: Information about the clan such as mission, leadership, and responsibilities.
 hidden_title: true
 ---
 
-<section role="main">
-  {% for post in paginator.posts %}
-  <h1 class="mtl">
-    <a href="{{ post.url }}">{{ post.title }}</a>
-  </h1>
-  {% include attribution.html source=post %}
-  <div class="content">
-    {{ post.content }}
-  </div>
-  {% endfor %}
+<div class="text-center pal">
+  <img src="{{ site.baseurl }}{% link assets/images/logo.png %}" alt="Ivalice Alliance Logo" style="max-width: 280px; width: 100%;" />
+</div>
 
-  <p>
-    {% if paginator.total_pages > 1 %}
-    <div class="pagination">
-      {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-      {% else %}
-      <span>&laquo; Prev</span>
-      {% endif %} {% for page in (1..paginator.total_pages) %} {% if page == paginator.page %}
-      <em>{{ page }}</em>
-      {% elsif page == 1 %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-      {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-      {% endif %} {% endfor %} {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-      {% else %}
-      <span>Next &raquo;</span>
-      {% endif %}
-    </div>
-    {% endif %}
-  </p>
-</section>
+<p>
+  The
+  <strong>
+    <em>Ivalice Alliance</em>
+  </strong> is a Final Fantasy themed clan that features a unique character system inspired by
+  the Final Fantasy series. The clan operates on a Discord server as a community that supports any topics and games that members
+  are interested in.</p>
+
+<h3 id="information">
+  Information
+</h3>
+<ul>
+  <li>Founded: February 2nd, 2008</li>
+  <li>Launched: February 17th, 2008</li>
+</ul>
+
+<h3 id="mission">
+  Mission
+</h3>
+<p>To facilitate a Final Fantasy themed gaming community with honor, integrity, and excellence.</p>
+
+<h3 id="leadership">
+  Leadership
+</h3>
+<h5>Leaders</h5>
+<p>Responsible for all daily management of the clan and for implementing short and long term plans. They shall make fair decisions
+  in the best interest of the clan.</p>
+<div class="grid-container text-center">
+  <div class="grid-x grid-margin-x align-center small-up-2 medium-up-4">
+    {% for leader in site.data.leadership.leaders %}
+      {% include card_sprite.html character=leader %}
+    {% endfor %}
+  </div>
+</div>
+<h5>Judges</h5>
+<p>Responsible for the daily operation of the clan and provide counsel to Leaders.</p>
+<div class="grid-container text-center">
+  <div class="grid-x grid-margin-x align-center small-up-2 medium-up-4">
+    {% for judge in site.data.leadership.judges %} 
+      {% include card_sprite.html character=judge %} 
+    {% endfor %}
+  </div>
+</div>

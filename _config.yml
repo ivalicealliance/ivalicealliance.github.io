@@ -5,7 +5,6 @@ highlighter: rouge
 
 plugins: 
   - jekyll-feed
-  - jekyll-paginate
   - jekyll-seo-tag  
 
 # File rules
@@ -25,13 +24,12 @@ exclude:
 # Site
 
 title: Ivalice Alliance
-description: A website with news and all things related to the Ivalice Alliance clan.
+description: All things related to the Ivalice Alliance clan.
 keyword: ivalice alliance, clan, gaming, final fantasy, xii, xiv
 url: https://www.ivalicealliance.net
 logo: /assets/images/clanlogo.png
 timezone: America/Los_Angeles
 year: 2008
-paginate: 5
 author: 
   name: Balthier
   twitter: balthier_ex
@@ -54,8 +52,3 @@ defaults:
       path: "assets/images"
     values:
       image: true
-  - scope:
-      path: "_posts"
-    values:
-      layout: default
-      post: true

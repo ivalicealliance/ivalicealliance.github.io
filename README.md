@@ -7,7 +7,6 @@ An open source website for [Ivalice Alliance](https://www.ivalicealliance.net) b
 Edit any HTML or Markdown files. When your changes land on `master`, it will automatically build a new version of the site. The changes will normally be visible within a minute. 
 
 You can also create new files.
-- Posts must go inside the `_posts` folder
 - HTML files can go where it makes most sense (usually root folder)
 
 ## Building Locally

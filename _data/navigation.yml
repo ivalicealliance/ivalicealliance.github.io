@@ -2,9 +2,6 @@
 - text: Home
   icon: fas fa-home
   link: index.html
-- text: About
-  icon: fas fa-info-circle
-  link: about.html
 - text: Signup
   icon: fas fa-user-plus
   link: signup.html
