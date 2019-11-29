@@ -78,11 +78,10 @@ icon: fas fa-users
             .join('')}
             <div class="ptl">
                 <p>
-                    This list was last updated on
+                    Retrieved on
                     <strong>${(new Date(list.meta.lastModified)).toLocaleTimeString('en-us', dateOptions)}</strong>.
-                    There are <strong>${list.meta.membercount}</strong> members across 
-                    <strong>${list.meta.rolecount}</strong> roles. This page is automatically generated with information from 
-                    {{ construct8 }}.
+                    There are <strong>${list.meta.membercount}</strong> members in 
+                    <strong>${list.meta.rolecount}</strong> roles. Generated from {{ construct8 }}.
                 </p>
             </div>
 	    `;
