@@ -8,9 +8,6 @@
 - text: Members
   icon: fas fa-users
   link: members.html
-- text: History
-  icon: fas fa-book
-  link: history.html
 # External 
 - text: Mail
   icon: fas fa-envelope
